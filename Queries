@@ -1,0 +1,211 @@
+QUERIES
+-- Create Database
+create database besant;
+use besant;
+-- DDL
+-- Create Table
+create table shopping(
+customer_id bigint,
+gender varchar(100),
+age int,
+quantity int,
+price bigint,
+payment_method varchar(100),
+invoice_date varchar(100),
+shopping_mall varchar(100));
+
+-- Alter Table
+alter table shopping add category varchar(100) after age;
+alter table shopping add  invoice_no bigint first;
+
+-- Rename Table
+alter table shopping rename to shopping_info;
+
+-- Drop Table
+ drop table shopping; 
+
+-- Truncate table
+Truncate shopping_info;
+
+-- DML
+-- Insert Table
+INSERT INTO `besant`.`shopping_info`
+(`invoice_no`,
+`customer_id`,
+`gender`,
+`age`,
+`category`,
+`quantity`,
+`price`,
+`payment_method`,
+`invoice_date`,
+`shopping_mall`)
+VALUES
+(138884,241288,'Female',28,'Clothing',5,1500.4,'Credit Card','2022-05-08','Kanyon'),
+(317333,111565,'Male',21,'Shoes',3,1800.51,'Debit Card','2021-12-12','Forum Istanbul'),
+(127801,266599,'Male',20,'Clothing',1,300.08,'Cash','2021-11-09','Metrocity'),
+(173702,988172,'Female',66,'Shoes',5,3000.85,'Credit Card','2021-05-16','Metropol AVM'),
+(337046,189076,'Female',53,'Books',4,60.6,'Cash','2021-10-24','Kanyon'),
+(227836,657758,'Female',28,'Clothing',5,1500.4,'Credit Card','2022-05-24','Forum Istanbul'),
+(121056,151197,'Female',49,'Cosmetics',1,40.66,'Cash','2022-03-13','Istinye Park'),
+(293112,176086,'Female',32,'Clothing',2,600.16,'Credit Card','2021-01-13','Mall of Istanbul'),
+(293455,159642,'Male',69,'Clothing',3,900.24,'Credit Card','2021-11-04','Metrocity'),
+(326945,283361,'Female',60,'Clothing',2,600.16,'Credit Card','2021-08-22','Kanyon'),
+(306368,240286,'Female',36,'Food & Beverage',2,	10.46,'Cash','2022-12-25','Metrocity'),
+(139207,191708,'Female',29,'Books',1,15.15,'Credit Card','2022-10-28','Emaar Square Mall'),
+(640508,225330,'Female',67,'Toys',4,143.36,'Debit Card','2022-07-31','Metrocity'),
+(179802,312861,'Male',25,'Clothing',2,600.16,'Cash','2022-11-17','Cevahir AVM'),
+(109053,232624,'Male',51,'Clothing',4,1200.32,'Debit Card','2021-07-11','Metrocity'),
+(198233,584141,'Female',31,'Cosmetics',4,162.64,'Cash','2023-02-12','Metropol AVM'),
+(310819,221934,'Male',26,'Cosmetics',5,203.3,'Credit Card','2022-11-27','Forum Istanbul'),
+(409288,513561,'Female',56,'Food',3,15.69,'Cash','2021-03-02','Viaport Outlet'),
+(131054,257990,'Female',34,'Toys',4,143.36,'Cash','2021-10-16','Kanyon'),
+(149521,168348,'Female',29,'Clothing',2,600.16,'Cash','2021-11-04','Kanyon'),
+(156233,161285,'Female',20,'Clothing',1,300.08,'Credit Card','2023-01-11','Mall of Istanbul'),
+(295784,166191,'Female',54,'Cosmetics',3,121.98,'Credit Card','2022-06-08','Forum Istanbul'),
+(255381,172966,'Male',40,'Clothing',4,1200.32,'Debit Card','2021-05-24','Metrocity'),
+(337719,320928,'Male',40,'Cosmetics',5,203.3,'Cash','2021-01-18','Istinye Park'),
+(220863,131497,'Male',21,'Books',4,60.6,'Cash','2021-07-22','Mall of Istanbul'),
+(530401,526660,'Female',32,'Technology',2,2100,'Cash','2022-09-25','Zorlu Center'),
+(219555,266961,'Male',47,'Clothing',3,900.24,'Credit Card','2021-09-10','Metrocity'),
+(316629,204741,'Female',41,'Souvenir',3,35.19,'Cash','2022-01-16','Cevahir AVM'), 
+(795251,181619,'male',33,'Cosmetics',5,203.3,'Cash','2022-01-16','Cevahir AVM'),
+(151099,250395,'Female',36,'Technology',3,208.3,'Credit Card','2024-01-16','Cevahir AVM'),
+(148821,168648,'Female',29,'Clothing',2,600.16,'Cash','2021-11-04','Kanyon'),
+(152233,165685,'Female',20,'Clothing',1,300.08,'Credit Card','2024-01-11','Mall of Istanbul'),
+(291984,166791,'Female',54,'Cosmetics',3,121.98,'Credit Card','2023-06-08','Forum Istanbul'),
+(2519081,172686,'Male',40,'Clothing',4,1200.32,'Debit Card','2021-05-24','Metrocity'),
+(332219,334928,'Male',40,'Cosmetics',5,203.3,'Cash','2020-01-18','Istinye Park'),
+(220003,111197,'Male',21,'Books',4,60.6,'Credit card','2022-07-22','Mall of Istanbul'),
+(531111,529990,'Female',32,'Technology',2,2100,'Cash','2022-10-25','Zorlu Center'),
+(212345,269061,'Male',47,'Clothing',3,900.24,'Credit Card','2021-09-15','Metrocity'),
+(316243,201141,'Female',41,'Souvenir',3,35.19,'Cash','2022-08-16','Cevahir AVM'),
+(138880,241200,'Female',28,'Clothing',5,1500.4,'Credit Card','2022-08-04','Kanyon'),
+(317330,111500,'Male',21,'Shoes',3,1800.51,'Debit Card','2021-11-12','Forum Istanbul'),
+(127001,266500,'Male',20,'Clothing',1,300.08,'Cash','2021-11-09','Metrocity'),
+(173700,988102,'male',66,'Shoes',5,3003.85,'Credit Card','2021-04-16','Metropol AVM'),
+(337041,189036,'Female',53,'Books',4,60.6,'Cash','2021-10-24','Kanyon'),
+(327836,657008,'Female',28,'Clothing',5,1500.4,'Credit Card','2022-5-24','Forum Istanbul'),
+(801056,151180,'Female',49,'Cosmetics',1,40.66,'Cash','2022-03-13','Istinye Park'),
+(200012,176555,'Female',32,'Clothing',2,600.16,'Credit Card','2021-01-13','Mall of Istanbul'),
+(298055,110642,'Male',69,'Clothing',3,900.24,'Credit Card','2021-11-14','Metrocity'),
+(333005,700361,'male',60,'Clothing',2,600.16,'Credit Card','2021-08-22','Kanyon'),
+(311118,249986,'male',36,'Food',2,10.46,'Cash','2022-12-25','Metrocity');
+
+-- Select
+select*from shopping_info;
+
+-- Update
+update shopping_info set gender='Female'where invoice_no=298055;
+update shopping_info set payment_method='credit card'where shopping_mall in('kanyon','metrocity');
+
+-- DQL
+-- Order by
+select*from shopping_info order by invoice_no asc;
+select*from shopping_info order by category asc;
+
+-- Distinct
+select distinct(category)from shopping_info;
+select distinct(payment_method)from shopping_info;
+select distinct(shopping_mall)from shopping_info;
+
+-- Group by
+select price,count(*) as count,sum(price) as Total from shopping_info group by price;
+select max(price) as Maximum from shopping_info;
+select shopping_mall,concat('Rs.',price) as price,concat('Rs.',sum(price))as total from shopping_info where shopping_mall not like'%y'group by shopping_mall,price having price>1000;
+
+-- Clauses
+select*from shopping_info where invoice_no between 200000 and 500000 order by invoice_no asc;
+select*from shopping_info where category like 'c%' and payment_method='cash' limit 3;
+select*from shopping_info where invoice_date between '2021-01-16' and '2022-05-16' order by invoice_date asc;
+
+-- Copy table existing
+create table besant.superstore as select*from kaviya.superstore;
+select*from besant.superstore;
+create table besant.venue as select*from kaviya.venue;
+create table besant.employee as select*from kaviya.employee;
+
+
+-- Union and Union All
+select invoice_no,gender,category,price from besant.shopping_info union select row_id,customer_name,sub_category,profit from besant.superstore;
+select profit,category from besant.superstore union select price,shopping_mall from besant.shopping_info ;
+select invoice_no,gender,category,price from besant.shopping_info union all select row_id,customer_name,sub_category,profit from besant.superstore;
+
+-- Joins
+select*from besant.employee inner join besant.venue on employee.employee_id=venue.employee_id;
+select*from besant.employee left join besant.venue on employee.employee_id=venue.employee_id;
+select*from besant.employee right join besant.venue on employee.employee_id=venue.employee_id;
+
+-- Subquery
+select distinct(price)from shopping_info order by price desc;
+select distinct(price)from shopping_info where price in(select max(price)as max from shopping_info);
+select category,price from (select category,price,row_number()over(order by price desc) as highest from shopping_info group by price,category) as Third_Highest where highest=2;
+select price from (select price,row_number()over(order by price desc) as highest from shopping_info) as Third_Highest where highest=5;
+
+--FUNCTIONS
+-- Aggrigate functions
+Select Sum(price) Price from shopping_info;
+Select Count(Category)Category from shopping_info;
+Select avg(price)Avg_Price from shopping_info;
+Select max(Price) Max_Price from shopping_info;
+Select min(Price)  Max_Price from shopping_info;
+
+-- String Functions
+select*from shopping_info;
+select concat(invoice_no,"   ",gender,"   ",shopping_mall)Details from shopping_info; -- Space --
+select concat('RS.',price)Price from shopping_info; -- adding Rs --
+select concat_ws(',',invoice_date,category)Details from shopping_info; -- separator(,) --
+select length(category) as Length_Category from shopping_info; -- Length --
+select char_length(category) as LLength_Category from shopping_info; -- Char Length --
+select left(shopping_mall,4) L_Name from shopping_info; -- from left side 1 to 8 
+select right(category,5) L_Name from shopping_info; -- from right side 1 to 8
+select lower(payment_method)Lower_Case from shopping_info; -- Lower Case --
+select upper(gender)Upper_Case from shopping_info; -- Upper Case --
+select ltrim('    Welcome Chennai       ')L_Trim; -- Left Trim --
+select rtrim('    Welcome Chennai       ')R_Trim; -- Right Trim --
+select trim('    Welcome Chennai       ')Trim; -- Both side of trim --
+select format(12500.2015,2) Formate; -- after dot (.) count 2 digits
+select format(12500.1578,4) Formate; -- after dot(.) count 4 digits --
+
+
+
+-- Date Functions
+select curdate(); -- Current Date --
+select current_time(); -- Current Time --
+select curtime(); -- 	Current Time --
+select now(); -- Present time with date --
+select date(now()); -- Only Date --
+select sysdate(); -- System Date --
+select utc_timestamp(); -- Universal Time Coordinated  Time with Date --
+select utc_time(); -- Universal Time Coordinated Time --
+select addtime('00:30:00','00:15:00') Result; -- Add Time --
+select date_add('1999-12-31 00:00:01',interval 1 day) Result; -- Add Date --
+select date_sub('2017-07-04',interval 2 day) Result; -- Sub Date --
+select extract(month from "2021-10-24")as Show_Month; -- Extract Month --
+select extract(year from "2021-10-24")as Show_Year; -- Extract Year --
+select datediff('2003-03-29','2003-03-15') as Date_Difference; -- Difference Between Date--
+select date_format("2003-03-29", "%W %D %M %Y") AS Formatted_Date; -- day,date,month,year --
+
+-- Windows Functions
+select*From shopping_info;
+select invoice_no,category,sum(price)over() as Total from shopping_info; -- set of table rows operate ,it is window function, without grouping --
+select Gender,shopping_mall,sum(price) over(partition by shopping_mall)as Total from shopping_info ; -- result set into partitions --
+
+-- Case Statement 
+select * from shopping_info;
+    select customer_id, category,
+        case when category = "books" then "This is books Category" else "This is not books Category" end as Result from shopping_info;
+-- If Statement
+    select * from shopping_info;
+    select invoice_date,shopping_mall, 
+		if(invoice_date >="2022-05-08","Yes","No")as Result from shopping_info; 
+
+--TCL COMMANDS
+-- Commit and Rollback
+select*from shopping_info;
+desc shopping_info;
+set autocommit=0;
+start transaction;
+insert into shopping_info values(123456,787899,'Female',22,'books',2,560,'cash','2024-08-20','Metrocity');
+rollback; ----- Back to Before Format -----
+commit;
